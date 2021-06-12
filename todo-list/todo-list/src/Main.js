@@ -14,17 +14,17 @@ export default function Main() {
         return(
             <div>
                 <p>{task}</p>
-                <button onClick= {()=>deleteTask(index)}>delete</button>
+               
                 <i class="far fa-trash-alt" onClick= {()=>deleteTask(index)}></i>
             </div>
         )
     })
     function deleteTask(index){
-        alert(index)
 
         var duparray = [...taskList]
         duparray.splice(index,1)
         setTaskList(duparray)
+        setTask('')
     }
     return (
         <div>
